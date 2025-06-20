@@ -1,66 +1,119 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OxieNetwork Sunucu</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: white;
-  }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(90deg, #1f1f1f, #3a3a3a);
-    padding: 15px 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-  }
-  .logo {
-    font-size: 28px;
-    font-weight: 900;
-    color: #00ffea;
-    letter-spacing: 3px;
-    cursor: default;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  nav ul li {
-    cursor: pointer;
-  }
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  nav ul li a:hover {
-    color: #00ffea;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oxie Network</title>
+  <style>
+    /* Sayfa ve arka plan */
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('https://www.dropbox.com/scl/fi/7easl4eiymce8kfvuisbn/image.png?rlkey=e2aa3vi8pvleafjcvm07mtn6h&st=ibwryac4&dl=1') no-repeat center center fixed;
+      background-size: cover;
+    }
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+    /* Logo veya sunucu ismi */
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    /* Menü */
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0; padding: 0;
+      gap: 25px;
+    }
+    nav ul li {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    nav ul li:hover {
+      color: #ffcc00;
+    }
+    /* Sağdaki butonlar */
+    .auth-buttons button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 8px 16px;
+      margin-left: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .auth-buttons button:hover {
+      background: #ffcc00;
+      border-color: #ffcc00;
+      color: black;
+    }
+    /* Ortadaki içerik */
+    .center-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      user-select: none;
+    }
+    .center-content h1 {
+      font-size: 48px;
+      margin: 0 0 15px 0;
+      text-shadow: 0 0 10px black;
+    }
+    .center-content button.play-btn {
+      background: #ffcc00;
+      border: none;
+      color: black;
+      font-size: 24px;
+      padding: 15px 50px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ffcc00;
+      transition: all 0.3s ease;
+    }
+    .center-content button.play-btn:hover {
+      background: #e6b800;
+      box-shadow: 0 0 20px #e6b800;
+    }
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">OXIE</div>
-  <nav>
-    <ul>
-      <li><a href="#">Ana Sayfa</a></li>
-      <li><a href="#">Hakkında</a></li>
-      <li><a href="#">Mağaza</a></li>
-      <li><a href="#">Destek</a></li>
-    </ul>
-  </nav>
-</header>
-
+  <header>
+    <div class="logo">Oxie Network</div>
+    <nav>
+      <ul>
+        <li>Ana Sayfa</li>
+        <li>Mağaza</li>
+        <li>Rütbeler</li>
+        <li>Kredi Sayfa</li>
+        <li>Destek</li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <button>Kayıt Ol</button>
+      <button>Giriş Yap</button>
+    </div>
+  </header>
+  <div class="center-content">
+    <h1>play.oxienetwork.com</h1>
+    <button class="play-btn">PLAY</button>
+  </div>
 </body>
 </html>
